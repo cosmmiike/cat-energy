@@ -1,0 +1,45 @@
+.copyright {
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: @main-color-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 27px 0;
+  @media @tablet-widths {
+    padding: 0;
+  }
+  &:active {
+    opacity: 0.3;
+    svg {
+      fill: @main-color-green;
+    }
+  }
+  .copyright__name {
+    margin-bottom: 4px;
+    @media @tablet-widths {
+      margin-bottom: -7px;
+    }
+    @media @desktop-widths {
+      margin-top: -7px;
+    }
+  }
+  .copyright__icon {
+    width: 27px;
+    height: 34px;
+    fill: #666666;
+    &:hover {
+      fill: @main-color-green;
+    }
+    @media @tablet-widths {
+      margin-top: 9px;
+      margin-left: 20px;
+    }
+    @media @desktop-widths {
+      margin-top: 0;
+    }
+  }
+}

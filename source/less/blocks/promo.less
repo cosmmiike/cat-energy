@@ -1,0 +1,113 @@
+.promo {
+  height: 502px;
+  @media @tablet-widths {
+    height: auto;
+  }
+  @media @desktop-widths {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .promo__wrapper {
+    .wrapper;
+    padding-top: 25px;
+    height: 305px;
+    background: @main-color-green url('../img/index-background-mobile@1x.jpg') no-repeat center 0;
+    @media @retina {
+      background-image: url('../img/index-background-mobile@2x.jpg');
+      background-size: auto 305px;
+    }
+    @media @tablet-widths {
+      padding-top: 30px;
+      background: white;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding-left: 120px;
+    }
+    @media @desktop-widths {
+      width: 420px;
+      margin: 0;
+      padding-left: 80px;
+      padding-top: 20px;
+      position: relative;
+    }
+  }
+  .promo__title {
+    margin-top: 0;
+    font-family: @font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: @main-color-white;
+    text-align: center;
+    margin-bottom: 29px;
+    @media @tablet-widths {
+      text-align: left;
+      color: @main-color-black;
+      font-size: 60px;
+      line-height: 60px;
+      width: 487px;
+      margin-bottom: 42px;
+    }
+    @media @desktop-widths {
+      margin-top: 80px;
+    }
+  }
+  .promo__slogan {
+    font-family: @font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: @main-color-white;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    @media @tablet-widths {
+      margin-bottom: 0;
+      text-align: left;
+      display: block;
+      color: @main-color-black;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @media @desktop-widths {
+      width: 370px;
+    }
+  }
+  .promo__picture {
+    order: 10;
+    @media @desktop-widths {
+      position: absolute;
+      top: 55px;
+      left: 768px;
+      transform: translateX(-50%);
+    }
+  }
+  .promo__img {
+    @media @tablet-widths {
+      width: 709px;
+      height: 609px;
+      margin-left: -90px;
+      margin-top: -33px;
+    }
+    @media @desktop-widths {
+      width: 552px;
+      height: 499px;
+    }
+  }
+  .promo__btn {
+    @media @tablet-widths {
+      position: relative;
+      top: 42px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 52px;
+      width: 245px;
+    }
+    @media @desktop-widths {
+      top: 55px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+  .logo__img {
+    &--icon {
+      @media @tablet-widths {
+        width: 173px;
+        height: 58px;
+      }
+      @media @desktop-widths {
+        width: 202px;
+        height: 59px;
+      }
+    }
+    &--text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @media @tablet-widths {
+        display: none;
+      }
+    }
+  }
+}

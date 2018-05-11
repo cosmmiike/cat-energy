@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>CAT ENERGY</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="logo  page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__img  logo__img--icon" src="img/logo-mobile.svg" width="33" alt="Логотип Cat Energy">
+          </picture>
+          <img class="logo__img  logo__img--text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
+        </a>
+        <!--  page-header__btn-menu--no-js для менюшки без JS -->
+        <button class="page-header__btn-menu  page-header__btn-menu--no-js" type="button">Меню</button>
+        <ul class="main-menu">
+          <li class="main-menu__item"><a class="main-menu__link" href="index.html">Главная</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-menu__item"><a class="main-menu__link  main-menu__link--active">Подбор программы</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <form action="https://echo.htmlacademy.ru" method="POST" class="program-select">
+        <div class="program-select__wrapper">
+          <h1 class="program-select__title">Подбор программы</h1>
+          <p class="program-select__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
+        <div class="program-select__form-groups">
+          <div class="program-select__form-group  program-select__form-group--desc-and-target">
+            <label for="name" class="program-select__label  program-select__label--input-text">Имя:*
+              <input type="text" id="name" class="program-select__input-text" placeholder="Барсик">
+            </label>
+            <label for="weight" class="program-select__label  program-select__label--input-text">Вес&nbsp;(КГ):*
+              <input type="text" id="weight" class="program-select__input-text" placeholder="7">
+            </label>
+            <label for="age" class="program-select__label  program-select__label--input-text">Возраст&nbsp;(Лет):
+              <input type="text" id="age" class="program-select__input-text" placeholder="7">
+            </label>
+          </div>
+          <div class="program-select__form-group  program-select__form-group--underline  program-select__form-group--desc-and-target">
+            <input type="radio" name="weight-options" id="losing-weight" class="program-select__radio" checked>
+            <label for="losing-weight" class="program-select__label  program-select__label--radio"> Похудение</label>
+            <input type="radio" name="weight-options" id="weight-gain" class="program-select__radio">
+            <label for="weight-gain" class="program-select__label  program-select__label--radio"> Набор массы</label>
+            <input type="radio" name="weight-options" id="dont-known" class="program-select__radio">
+            <label for="dont-known" class="program-select__label  program-select__label--radio"> Не знаю (Нужен ваш совет)</label>
+          </div>
+        </div>
+        <div class="program-select__wrapper">
+          <div class="program-select__form-group  program-select__form-group--contacts">
+            <div class="program-select__title-wrapper">
+              <h2 class="program-select__title-group  program-select__title-group--contacts">Контактные данные (владельца кота)</h2>
+            </div>
+            <label for="email" class="program-select__label  program-select__label--contact">E&#8209;mail:*
+              <input type="email" id="email" class="program-select__input-text" placeholder="kuklachev@gmail.com">
+              <svg class="program-select__svg" width="17" height="13">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </label>
+            <label for="phone" class="program-select__label  program-select__label--contact">Телефон:*
+              <input type="tel" id="phone" class="program-select__input-text" placeholder="8 (960) 900-60-90">
+              <svg class="program-select__svg" width="20" height="20">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="program-select__form-group  program-select__form-group--comment">
+            <div class="program-select__title-wrapper">
+              <h2 class="program-select__title-group">Комментарий</h2>
+            </div>
+            <textarea class="program-select__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+          <div class="program-select__form-group">
+            <div class="program-select__title-wrapper">
+              <h2 class="program-select__title-group">Дополнительно</h2>
+            </div>
+            <div class="program-select__group-checkbox">
+              <input type="checkbox" name="sweetener" id="sweetener" class="program-select__checkbox">
+              <label for="sweetener" class="program-select__label  program-select__label--checkbox"> Сахарозаменитель</label>
+              <input type="checkbox" name="water" id="water" class="program-select__checkbox">
+              <label for="water" class="program-select__label  program-select__label--checkbox"> Питьевая вода</label>
+              <input type="checkbox" name="milk" id="milk" class="program-select__checkbox">
+              <label for="milk" class="program-select__label  program-select__label--checkbox"> Молоко</label>
+              <input type="checkbox" name="vitamins" id="vitamins" class="program-select__checkbox">
+              <label for="vitamins" class="program-select__label  program-select__label--checkbox"> Витамины</label>
+            </div>
+          </div>
+          <button class="btn program-select__form-submit" type="submit">Отправить заявку</button>
+          <p class="program-select__required-fields">* &mdash; Обязательные поля</p>
+        </div>
+
+      </form>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <b class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+          <address class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
+          </address>
+        </div>
+      </section>
+      <div class="map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="361" srcset="img/bg-map-mobile@2x.png 2x" alt="Котик">
+        </picture>
+        <iframe class="map__iframe" width="600" height="361" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%2019%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20191186&key=AIzaSyD2MPmJ3z0bMNdtH-1cX39Zcv3nJo2gtDU" allowfullscreen></iframe>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="logo  page-footer__logo" href="index.html">
+          <img class="logo__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+        </a>
+        <ul class="social  page-footer__social">
+          <li class="social__item">
+            <a class="social__link  social__link--vkontakte" href="#">
+              Мы в Вконтакте
+              <svg class="social__img  social__img--vkontakte" width="22" height="12">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-vk-mobile"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--instagram" href="#">
+              Мы в Инстаграме
+              <svg class="social__img  social__img--instagram" width="16" height="16">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-insta-mobile"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--facebook" href="#">
+              Мы в Фейсбуке
+              <svg class="social__img  social__img--facebook" width="10" height="19">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-fb-mobile"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="copyright" href="#">
+          <span class="copyright__name">Mikhail SHAYMARDANOV</span>
+        </a>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/svgxuse.js"></script>
+  </body>
+</html>
